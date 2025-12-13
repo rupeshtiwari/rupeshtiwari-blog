@@ -8,6 +8,15 @@ A diagnostic utility for GitHub Pages deployments that helps users identify and 
 
 Preferred communication style: Simple, everyday language.
 
+## User's Blog Information
+
+- **Blog URL**: blog.rupeshtiwari.com
+- **Repository**: rupeshtiwari/blogs
+- **Framework**: Jekyll with Chirpy theme
+- **Hosting**: GitHub Pages
+- **Domain Registrar**: Hostinger
+- **Current Issue**: DNS not configured - needs CNAME record pointing to rupeshtiwari.github.io
+
 ## System Architecture
 
 ### Frontend Architecture
