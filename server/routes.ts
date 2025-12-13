@@ -451,6 +451,62 @@ theme: jekyll-theme-minimal
     }
   });
 
+  // List directory contents
+  app.get("/api/list-files", async (req: Request, res: Response) => {
+    try {
+      const { owner, repo, path = "" } = req.query;
+      if (!owner || !repo) {
+        return res.status(400).json({ error: "Owner and repo are required" });
+      }
+
+      const octokit = await getUncachableGitHubClient();
+      const { data } = await octokit.repos.getContent({ 
+        owner: owner as string, 
+        repo: repo as string, 
+        path: path as string 
+      });
+
+      if (Array.isArray(data)) {
+        res.json({ 
+          success: true, 
+          files: data.map(f => ({ name: f.name, path: f.path, type: f.type }))
+        });
+      } else {
+        res.json({ success: true, files: [{ name: data.name, path: data.path, type: data.type }] });
+      }
+    } catch (error: any) {
+      console.error("List files error:", error);
+      res.status(500).json({ error: error.message || "Failed to list files" });
+    }
+  });
+
+  // Get file content
+  app.get("/api/get-file", async (req: Request, res: Response) => {
+    try {
+      const { owner, repo, path } = req.query;
+      if (!owner || !repo || !path) {
+        return res.status(400).json({ error: "Owner, repo, and path are required" });
+      }
+
+      const octokit = await getUncachableGitHubClient();
+      const { data } = await octokit.repos.getContent({ 
+        owner: owner as string, 
+        repo: repo as string, 
+        path: path as string 
+      });
+
+      if (Array.isArray(data) || data.type !== 'file') {
+        return res.status(400).json({ error: "Path is not a file" });
+      }
+
+      const content = Buffer.from(data.content, 'base64').toString('utf-8');
+      res.json({ success: true, content, sha: data.sha });
+    } catch (error: any) {
+      console.error("Get file error:", error);
+      res.status(500).json({ error: error.message || "Failed to get file" });
+    }
+  });
+
   // Delete file endpoint
   app.delete("/api/delete-file", async (req: Request, res: Response) => {
     try {
