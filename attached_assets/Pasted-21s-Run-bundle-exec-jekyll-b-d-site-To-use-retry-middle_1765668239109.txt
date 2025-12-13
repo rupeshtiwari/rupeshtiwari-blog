@@ -1,0 +1,124 @@
+21s
+Run bundle exec jekyll b -d "_site"
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+Configuration file: /home/runner/work/blogs/blogs/_config.yml
+            Source: /home/runner/work/blogs/blogs
+       Destination: /home/runner/work/blogs/blogs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "jekyll-theme-chirpy";
+  │         ^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    /home/runner/work/blogs/blogs/assets/css/style.scss 1:9  root stylesheet
+Error: Can't find stylesheet to import.
+  ╷
+1 │ @import "jekyll-theme-chirpy";
+  │         ^^^^^^^^^^^^^^^^^^^^^
+  ╵
+  /home/runner/work/blogs/blogs/assets/css/style.scss 1:9  root stylesheet 
+  Conversion error: Jekyll::Converters::Scss encountered an error while converting 'assets/css/style.scss':
+                    Can't find stylesheet to import.
+                    ------------------------------------------------
+      Jekyll 4.4.1   Please append `--trace` to the `build` command 
+                     for any additional information or backtrace. 
+                    ------------------------------------------------
+/home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-sass-converter-3.1.0/lib/jekyll/converters/scss.rb:181:in `rescue in convert': Can't find stylesheet to import. (Jekyll::Converters::Scss::SyntaxError)
+
+          raise SyntaxError, e.message
+                ^^^^^^^^^^^^^^^^^^^^^^
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-sass-converter-3.1.0/lib/jekyll/converters/scss.rb:162:in `convert'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:105:in `block in convert'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:104:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:104:in `reduce'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:104:in `convert'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:84:in `render_document'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:63:in `run'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:572:in `render_regenerated'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:564:in `block in render_pages'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:563:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:563:in `render_pages'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:211:in `render'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:80:in `process'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:28:in `process_site'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:65:in `build'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:36:in `process'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:18:in `block (2 levels) in init_with_program'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/exe/jekyll:15:in `<top (required)>'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/bin/jekyll:25:in `load'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/bin/jekyll:25:in `<top (required)>'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/gems/3.3.0/gems/bundler-2.5.22/exe/bundle:28:in `block in <top (required)>'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/gems/3.3.0/gems/bundler-2.5.22/exe/bundle:20:in `<top (required)>'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle:25:in `load'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle:25:in `<main>'
+/home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.96.0-x86_64-linux-gnu/lib/sass/compiler/host.rb:86:in `compile_request': Can't find stylesheet to import. (Sass::CompileError)
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.96.0-x86_64-linux-gnu/lib/sass/compiler.rb:172:in `compile_string'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.96.0-x86_64-linux-gnu/lib/sass/embedded.rb:37:in `compile_string'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-sass-converter-3.1.0/lib/jekyll/converters/scss.rb:163:in `convert'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:105:in `block in convert'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:104:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:104:in `reduce'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:104:in `convert'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:84:in `render_document'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:63:in `run'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:572:in `render_regenerated'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:564:in `block in render_pages'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:563:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:563:in `render_pages'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:211:in `render'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:80:in `process'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:28:in `process_site'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:65:in `build'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:36:in `process'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:18:in `block (2 levels) in init_with_program'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/gems/jekyll-4.4.1/exe/jekyll:15:in `<top (required)>'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/bin/jekyll:25:in `load'
+	from /home/runner/work/blogs/blogs/vendor/bundle/ruby/3.3.0/bin/jekyll:25:in `<top (required)>'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/gems/3.3.0/gems/bundler-2.5.22/exe/bundle:28:in `block in <top (required)>'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/lib/ruby/gems/3.3.0/gems/bundler-2.5.22/exe/bundle:20:in `<top (required)>'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle:25:in `load'
+	from /opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle:25:in `<main>'
+Error: Process completed with exit code 1.
