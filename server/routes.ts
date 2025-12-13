@@ -451,5 +451,39 @@ theme: jekyll-theme-minimal
     }
   });
 
+  // Delete file endpoint
+  app.delete("/api/delete-file", async (req: Request, res: Response) => {
+    try {
+      const { owner, repo, path, message } = req.body;
+      if (!owner || !repo || !path || !message) {
+        return res.status(400).json({ error: "Owner, repo, path, and message are required" });
+      }
+
+      const octokit = await getUncachableGitHubClient();
+      const { data: repoData } = await octokit.repos.get({ owner, repo });
+      const defaultBranch = repoData.default_branch;
+
+      // Get file SHA (required for deletion)
+      const { data: fileData } = await octokit.repos.getContent({ owner, repo, path });
+      if (Array.isArray(fileData) || fileData.type !== 'file') {
+        return res.status(400).json({ error: "Path is not a file" });
+      }
+
+      await octokit.repos.deleteFile({
+        owner,
+        repo,
+        path,
+        message,
+        sha: fileData.sha,
+        branch: defaultBranch,
+      });
+
+      res.json({ success: true, message: `Deleted ${path}` });
+    } catch (error: any) {
+      console.error("Delete file error:", error);
+      res.status(500).json({ error: error.message || "Failed to delete file" });
+    }
+  });
+
   return httpServer;
 }
