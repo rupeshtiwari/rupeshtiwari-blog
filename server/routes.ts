@@ -413,5 +413,43 @@ theme: jekyll-theme-minimal
     }
   });
 
+  app.post("/api/update-file", async (req: Request, res: Response) => {
+    try {
+      const { owner, repo, path, content, message } = req.body;
+      if (!owner || !repo || !path || !content || !message) {
+        return res.status(400).json({ error: "Owner, repo, path, content, and message are required" });
+      }
+
+      const octokit = await getUncachableGitHubClient();
+      const { data: repoData } = await octokit.repos.get({ owner, repo });
+      const defaultBranch = repoData.default_branch;
+
+      let sha: string | undefined;
+      try {
+        const { data: fileData } = await octokit.repos.getContent({ owner, repo, path });
+        if (!Array.isArray(fileData) && fileData.type === 'file') {
+          sha = fileData.sha;
+        }
+      } catch {
+        // File doesn't exist, that's ok for create
+      }
+
+      await octokit.repos.createOrUpdateFileContents({
+        owner,
+        repo,
+        path,
+        message,
+        content: Buffer.from(content).toString('base64'),
+        branch: defaultBranch,
+        sha,
+      });
+
+      res.json({ success: true, message: `Updated ${path}` });
+    } catch (error: any) {
+      console.error("Update file error:", error);
+      res.status(500).json({ error: error.message || "Failed to update file" });
+    }
+  });
+
   return httpServer;
 }
