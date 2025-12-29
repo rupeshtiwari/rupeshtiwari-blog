@@ -1,0 +1,68 @@
+# Jekyll Configuration for Chirpy Theme
+# Site settings
+lang: en
+timezone: America/New_York
+title: Rupesh Tiwari's Blog
+tagline: Tech Blog
+description: >- # this means to ignore newlines until "baseurl:"
+  A tech blog by Rupesh Tiwari
+url: https://blog.rupeshtiwari.com
+baseurl: ""  # Change this if deploying to a subdirectory
+
+# Social and Contact
+twitter:
+  username: # twitter username
+  card: summary
+github:
+  username: rupeshtiwari
+linkedin:
+  username: # linkedin username
+
+# Theme
+theme: jekyll-theme-chirpy
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Pagination
+paginate: 10
+paginate_path: /page:num/
+
+# Archives
+jekyll-archives:
+  enabled: true
+  layouts:
+    all: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
